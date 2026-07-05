@@ -33,7 +33,7 @@ Prusa slicer tutorials:
 	Finder -> drag file onto Prusa Slicer icon
 
 ## Configure settings
-### Plater tab
+### Plater tab ========================================================================
 
 position object on plate
  - check that bottom sits flat on the build plate
@@ -48,7 +48,7 @@ position object on plate
 - Infill: 10-15%
 - Brim: yes, always!
 
-### Print Settings tab
+### Print Settings tab ========================================================================
 #### Layers and perimeters
 ##### Layer heght
 - Layer height: 0.2mm (sufficient for most) - use 0.1mm for extra fine detail (and 2x print time)
@@ -98,7 +98,7 @@ position object on plate
 ##### Raft
 - Raft: only if neccessary. 
 
-### Filament Settings tab - adjust these based on the filament specifications and experience
+### Filament Settings tab - adjust these based on the filament specifications and experience ==============
 #### Filament
 ##### Temperature
 - Nozzle: 
