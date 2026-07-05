@@ -98,7 +98,7 @@ position object on plate
 ##### Raft
 - Raft: only if neccessary. 
 
-### Filament Settings tab - adjust these based on the filament specifications and experience ==============
+### Filament Settings tab - adjust these based on the filament specifications and experience ============================================================================================
 #### Filament
 ##### Temperature
 - Nozzle: 
