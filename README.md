@@ -98,7 +98,7 @@ position object on plate
 ##### Raft
 - Raft: only if neccessary. 
 
-### Filament Settings tab - adjust these based on the filament specifications and experience ============================================================================================
+### Filament Settings tab - adjust these based on the filament specifications and experience =====================================================
 #### Filament
 ##### Temperature
 - Nozzle: 
@@ -109,14 +109,15 @@ position object on plate
       - Other layers: 60°C <- hotter improves adhesion? but also increase chaces of warping?
 
 ## Double Check Settings
- 		pro move - start 3D printer preheating 
+->> pro move - start 3D printer preheating 
 
-## Slice now - bottom right hand corner
-- double check settings
+## Slice!
+- Slice now - bottom right hand corner
 - inspect layers, brim, support, etc
 - note print time - bottom right hand corner
 
-## Export G-code - bottom right hand corner
+## Export G-code!
+- bottom right hand corner
 - save file with meaningful file name
   - no spaces or punctuation
   - nothing but letters, numbers, or underscores
@@ -139,7 +140,7 @@ position object on plate
 Monoprice MP10 printer [manual](https://downloads.monoprice.com/files/manuals/34437_Manual_181204.pdf)
 
 insert microSD card into 3D printer 
-	- upside down!
+- upside down!
 
 ## PRINT!
 - navigate to "Print"
