@@ -148,8 +148,9 @@ insert microSD card into 3D printer
 - PRINT!
 
 ## WAIT
+- wipe down the build plate with alcohol (while waiting for nozzle and bed to heat)
 - wait for nozzle and bed to heat to temp
-- wait for auto-bed leveling sequence
+- wait for auto bed-leveling sequence
 
 ## WATCH
 - watch loop & brim printing
@@ -159,6 +160,13 @@ insert microSD card into 3D printer
 - ensure that first layer prints well <- this is the most common failure point
   - watch the first few layers print
 - if all looks good, remain vigilant, but not obsessively so.
+
+## Remove print
+- remove and flex (gently) the metal print plate to remove the print
+- wipe down the plate with alcohol to remove grease and ensure good ahesion for the next print
+- replace build plate, making sure to line up edges
+
+## Enjoy your freshly printed thing!!
 	
 
 		
