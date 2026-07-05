@@ -12,9 +12,11 @@ sources for downloadable 3D models:
 - https://www.printables.com/  <- Prusa's site
 - https://makerworld.com/en <- Bambu's site
 
-## Launch Prusa Slicer
+## Launch Prusa Slicer 
 
 A slicer is software that converts a digital 3D model into machine-readable instructions. It cuts the 3D object into thousands of flat horizontal layers and generates the exact G-code instructions your printer needs to print the object line by line.
+
+[download Prusa SLicer](https://www.prusa3d.com/p/prusaslicer/)
 	
 Prusa slicer tutorials: 
 - https://help.prusa3d.com/article/first-print-with-prusaslicer_1753
@@ -35,7 +37,7 @@ Prusa slicer tutorials:
 
 position object on plate
  - check that bottom sits flat on the build plate
-   - use "Place on Face" if necessary
+   - use [Place on Face](https://help.prusa3d.com/article/place-on-face-tool_1781) if necessary
  - rotate, scale, cut, duplicate, paint supports or seams, add text, etc
 
 #### Print Settings: Monoprice MP10 mini
@@ -47,107 +49,115 @@ position object on plate
 - Brim: yes, always!
 
 ### Print Settings tab
+#### Layers and perimeters
+##### Layer heght
+- Layer height: 0.2mm (sufficient for most) - use 0.1mm for extra fine detail (and 2x print time)
+- First layer height: 0.25mm (sufficient for most)
 
-Layers and perimeters
-			Layer height: 0.2mm (sufficient for most) - use 0.1mm for extra fine detail (and 2x print time)
-			First layer height: 0.25mm (sufficient for most)
+##### Vertical Shells
+- Perimeters: 2-4 (sufficient for most)
+  - this sets the minimum number of layers to print on all outside vertical surfaces
+  - increase perimeters for strength, watertightness, weight, etc
 
-			Vertical Shells
-			Perimeters: 2-4 (sufficient for most)
-				this sets the minimum number of layers to print on all outside vertical surfaces
-				increase perimeters for strength, watertightness, weight, etc
+##### Horizontal Shells
+- Perimeters: 2-4 (sufficient for most)
+  - this sets the minimum number of layers to print on all outside horizontal surfaces
+  - increase perimeters for strength, watertightness, weight, etc
 
-			Horizontal Shells
-			Perimeters: 2-4 (sufficient for most)
-				this sets the minimum number of layers to print on all outside horizontal surfaces
-				increase perimeters for strength, watertightness, weight, etc
+##### Advanced
+- Seam position: to taste...
 
-			Seam position: to taste...
+#### Infill 
+##### Infill 
+- Fill density: 10-15%
+  - this sets the amount of inner support insde the perimeter shells
+- Fill pattern: Gyroid
+  - Gyroid preferred for faster printing and less wear on motors
+  - Lightning for super fast printing and minimal support
 
-		Infill
-			Fill density: 10-15%
-				this sets the amount of inner support insde the perimeter shells
-			Fill pattern: Gyroid
-				Gyroid preferred for faster printing and less wear on motors
-				Lightning for super fast printing and minimal support
+- Top fill pattern: to taste...
+  - mostly a matter of aesthetics, this determines the surface pattern of the top layer
+- Bottom fill pattern: 
+  - shouldn't matter as the build plate will give texture to the bottom layer
 
-			Top fill pattern: to taste...
-				mostly a matter of aesthetics, this determines the surface pattern of the top layer
-			Bottom fill pattern: 
-				shouldn't matter as the build plate will give texture to the bottom layer
+#### Skirt and brim
+##### Skirt
+- Loops: 0-2 
+  - use this to purge old filament and get filament flowing before the actual printing starts
+##### Brim			
+- Brim: 0-8mm
+  - recommended to ALWAYS print a brim!
+	- brim helps to adhere the print to the build plate
+	- brim prevents model edge warping on long/hot prints
+	- brim is easily removed after printing
 
-		Skirt and brim
-			Loops: 0-2 
-				use this to purge old filament and get filament flowing before the actual printing starts
-			
-			Brim: 0-8mm
-				recommended to ALWAYS print a brim!
-				brim helps to adhere the print to the build plate
-				brim prevents model edge warping on long/hot prints
-				brim is easily removed after printing
+#### Support material
+##### Support material
+- Generate support material: only if neccessary. 
+  - Ideally -> design or position models to not require supports
+##### Raft
+- Raft: only if neccessary. 
 
-		Support material
-			Generate support material: only if neccessary. 
-				Ideally -> design or position models to not require supports
+### Filament Settings tab - adjust these based on the filament specifications and experience
+#### Filament
+##### Temperature
+- Nozzle: 
+  - First layer: 210°C
+    - Other layers: 205°C  <- I generally set the first layer 5° under maximum and subsequent layers 5° less
+  - Bed: 
+    - First layer: 60°C
+      - Other layers: 60°C <- hotter improves adhesion? but also increase chaces of warping?
 
-			Raft: only if neccessary. 
+## Double Check Settings
+ 		pro move - start 3D printer preheating 
 
-	Print Settings tab - adjust these based on the filament specifications and experience
-		Temperature
-			Nozzle: 
-				First layer: 210°C	Other layers: 205°C  <- I generally set the first layer 5° under maximum and subsequent layers 5° less
-			Bed: 
-				First layer: 60°C	Other layers: 60°C <- hotter improves adhesion? but also increase chaces of warping?
+## Slice now - bottom right hand corner
+- double check settings
+- inspect layers, brim, support, etc
+- note print time - bottom right hand corner
 
-Double Check Settings
-
-	pro move - start 3D printer preheat here
-
-Slice now - bottom right hand corner
-	double check settings
-	inspect layers, brim, support, etc
-	note print time - bottom right hand corner
-
-Export G-code - bottom right hand corner
-	save file with meaningful file name
-		no spaces or punctuation
-		nothing but letters, numbers, or underscores
-		append settings and print time to end of file
-			there is a way to do this programatically...
-		shorter is better, long filenames get truncated on 3D printer screen
-		example: TTmotorMount_1h26m.gcode 
+## Export G-code - bottom right hand corner
+- save file with meaningful file name
+  - no spaces or punctuation
+  - nothing but letters, numbers, or underscores
+  - append settings and print time to end of file
+    - there is a way to do this programatically...
+  - shorter is better, long filenames get truncated on 3D printer screen
+- example: TTmotorMount_1h26m.gcode 
 
 
-micro SD Card
-Copy G-code file to microSD card 
-	use micro-> SD card adaptor
-	Ensure readability
-		copy another random file to the drive (SD card)
-		delete that random file
-		empty trash
-	Eject drive (SD card)
+# micro SD Card
+## Copy G-code file to microSD card 
+- use micro-> SD card adaptor
+- Ensure readability
+  - copy another random file to the drive (SD card)
+  - delete that random file
+  - empty trash
+  - Eject drive (SD card)
 
-Monoprice MP10 printer
+# Monoprice MP10 printer
+Monoprice MP10 printer [manual](https://downloads.monoprice.com/files/manuals/34437_Manual_181204.pdf)
+
 insert microSD card into 3D printer 
-	upside down!
+	- upside down!
 
-PRINT!
-	navigate to "Print"
-	navigate to file
-	PRINT!
+## PRINT!
+- navigate to "Print"
+- navigate to file
+- PRINT!
 
-WAIT
-	wait for nozzle and bed to heat to temp
-	wait for auto-bed leveling sequence
+## WAIT
+- wait for nozzle and bed to heat to temp
+- wait for auto-bed leveling sequence
 
-WATCH
-	watch loop & brim printing
-	ensure that nozzle distance is correct (adjust if necessary)
-	ensure that lines are adhering to the bed
-		if not: clean bed or adjust settings
-	ensure that first layer prints well <- this is the most common failure point
-	watch the first few layers print
-		if all looks good, remain vigilant, but not obsessive.
+## WATCH
+- watch loop & brim printing
+- ensure that nozzle distance is correct (adjust if necessary)
+- ensure that lines are adhering to the bed
+  - if not: clean bed or adjust settings
+- ensure that first layer prints well <- this is the most common failure point
+  - watch the first few layers print
+- if all looks good, remain vigilant, but not obsessively so.
 	
 
 		
