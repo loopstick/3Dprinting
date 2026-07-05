@@ -163,7 +163,7 @@ insert microSD card into 3D printer
 
 ## Remove print
 - remove and flex (gently) the metal print plate to remove the print
-- wipe down the plate with alcohol to remove grease and ensure good ahesion for the next print
+- wipe down the plate with alcohol to remove grease and ensure good adhesion for the next print
 - replace build plate, making sure to line up edges
 
 ## Enjoy your freshly printed thing!!
